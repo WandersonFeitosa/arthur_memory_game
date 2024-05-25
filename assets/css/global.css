@@ -1,0 +1,133 @@
+:root {
+  --mobile-end: 600px;
+  --tablet-end: 770px;
+  --mid-end: 1500px;
+  --fs-base: 16px;
+  --gray: #f2f0f0;
+  --gray-100: #e1e1e6;
+  --gray-300: #c4c4cc;
+  --gray-400: #8d8d99;
+  --gray-600: #323238;
+  --gray-700: #29292e;
+  --gray-900: #121214;
+  --white: #fff;
+  --green-300: #00b37e;
+  --green-500: #00875f;
+  --red-400: #c53f05;
+  --red-500: #f75a68;
+  --blue-400: #4e59d7;
+  --blue-500: #3f4ef7;
+  --yellow-500: #f7c948;
+  --purple-500: #9b51e0;
+  --clr-primary: var(--blue-400);
+  --clr-secondary: var(--gray-700);
+  --clr-tertiary: var(--gray-900);
+  --cards-width: 100px;
+  --cards-height: 180px;
+}
+
+html {
+  overflow-x: hidden;
+}
+
+html,
+body {
+  min-height: 100vh;
+  scrollbar-color: var(--clr-primary);
+  background: var(--gray-700);
+  color: var(--gray-100);
+  * {
+    font-family: "Inter", sans-serif;
+    line-height: 1.2;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+    transition: all 0.1s;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: #fff;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--blue-400);
+    transition: all 0.2s;
+  }
+
+  strong {
+    font-weight: 700;
+  }
+
+  &.hide-scrollbar {
+    &::-webkit-scrollbar-thumb {
+      background-color: #fff;
+    }
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: rem(1215);
+  margin: 0 auto;
+
+  @media (max-width: var(--mobile-end)) {
+    padding: 0 rem(20);
+    max-width: 100%;
+  }
+}
+
+.hide-mobile {
+  @media (max-width: var(--mobile-end)) {
+    display: none !important;
+  }
+}
+
+.hide-desktop {
+  @media (min-width: var(--mobile-end)) {
+    display: none !important;
+  }
+}
+
+button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.loading-dots::after {
+  content: "";
+  animation: loading 3s infinite;
+}
+
+@keyframes loading {
+  0% {
+    content: ".";
+  }
+
+  33% {
+    content: "..";
+  }
+
+  66% {
+    content: "...";
+  }
+
+  100% {
+    content: ".";
+  }
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+}
+*::-webkit-scrollbar-thumb {
+  background: var(--gray-600);
+  border-top-right-radius: rem(15);
+  border-bottom-right-radius: rem(15);
+}
+*::-webkit-scrollbar-track {
+  background: var(--white);
+  border-top-right-radius: rem(15);
+  border-bottom-right-radius: rem(15);
+}

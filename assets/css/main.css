@@ -1,0 +1,38 @@
+body {
+  max-height: 100vh;
+}
+
+.page_title h1 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--clr-primary);
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2rem;
+}
+
+.game_board {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(var(--cards-width), 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+  padding: 2rem;
+}
+
+.game_card {
+  border-radius: 1rem;
+  padding: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  transition: all 0.2s;
+  height: var(--cards-height);
+  background-position-x: center !important;
+  background-position-y: top !important;
+  background-size: cover !important;
+  cursor: pointer;
+}
+
+.hidden {
+  background: url(../img/default.webp) !important;
+  background-position-y: top !important;
+  background-size: cover !important;
+}
