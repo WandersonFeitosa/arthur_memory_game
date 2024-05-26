@@ -1,15 +1,16 @@
-document.addEventListener("DOMContentLoaded", () => {
-  fetch("./assets/json/cards.json")
-    .then((response) => response.json())
-    .then((data) => loadCards(data))
-    .catch((error) =>
-      console.error("There was a problem with the fetch operation:", error)
-    );
-});
+// document.addEventListener("DOMContentLoaded", () => {
+//   fetch("./assets/json/cards.json")
+//     .then((response) => response.json())
+//     .then((data) => loadCards(data))
+//     .catch((error) =>
+//       console.error("There was a problem with the fetch operation:", error)
+//     );
+// });
 
 // Define a quantidade de cartas que tu quer que apareça no jogo
 // o máximo é a quantidade de itens que tiver lá
 // na /assets/json/cards.json
+
 const maxCards = 12;
 
 function loadCards(data) {
@@ -38,3 +39,5 @@ function loadCards(data) {
 function flipCard(card) {
   card.classList.remove("hidden");
 }
+
+loadCards(cardsList);
