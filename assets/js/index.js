@@ -29,6 +29,8 @@ function loadCards(data) {
 
   data = data.concat(data);
 
+  data.sort(() => Math.random() - 0.5);
+
   data.forEach((card) => {
     const cardElement = document.createElement("div");
     cardElement.classList.add("game_card");
