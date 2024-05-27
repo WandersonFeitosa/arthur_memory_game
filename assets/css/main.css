@@ -36,3 +36,31 @@ body {
   background-position-y: top !important;
   background-size: cover !important;
 }
+
+.start_game {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  background-color: white;
+  width: 300px;
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.section_start_game {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
+
+button {
+  background-color: rgba(255, 255, 255, 0.596);
+  border-radius: 4px;
+  border: 2px solid black;
+  padding: 10px;
+}
