@@ -101,3 +101,5 @@ function resetGame() {
   gameBoard.innerHTML = "";
   gameOn = false;
 }
+
+loadCards(cardsList);
